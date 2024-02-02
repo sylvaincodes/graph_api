@@ -13,4 +13,4 @@ const port = process.env.PORT;
 middlewares(app, schema, root);
 
 app.listen(4000);
-console.log("Running a GraphQL API server at " + "/graphql");
+console.log("Running a GraphQL API server at " + "http://localhost:4000/graphql");

@@ -6,14 +6,15 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon ./index.js --exec babel-node -e js",
-    "prod": "nodemon ./index.js --exec babel-node -e js" 
-   },
+    "prod": "nodemon ./index.js --exec babel-node -e js"
+  },
   "keywords": [
     "graphql"
   ],
   "author": "sylvaincodes",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",

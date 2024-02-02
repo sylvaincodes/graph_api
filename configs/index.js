@@ -3,7 +3,7 @@
  * AND WE PROVIDE A PROMISE FUNCTION THAT CAN BE
  * USED ANYWHERE IN THE PROJECT. *
  ********************************************************************************************************************************/
-
+const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const { graphqlHTTP } = require("express-graphql");
@@ -22,6 +22,8 @@ const dbConnect = mongoose
 const db = mongoose.connection;
 
 const middlewares = (app, schema, root) => {
+  app.use(cors());
+  app.options("*", cors()); //Activation pre flight
   app.use(
     "/graphql",
     graphqlHTTP({

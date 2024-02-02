@@ -6,7 +6,7 @@ const { getTask, getTasks, addTask, updateTask } = require("../resolver");
 
 const root = {
   task: getTask,
-  allTaks: getTasks,
+  allTasks: getTasks,
   addTask: addTask,
   updateTask: updateTask,
 };

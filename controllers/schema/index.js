@@ -12,7 +12,7 @@ const schemas = buildSchema(`
     done: Boolean
   }
   type Query {
-    allTaks(done: Boolean): [Task]
+    allTasks(done: Boolean): [Task]
     task(id: String): Task
   }
   type Mutation{
