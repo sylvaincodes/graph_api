@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./index.js --exec babel-node -e js"
-  },
+    "dev": "nodemon ./index.js --exec babel-node -e js",
+    "prod": "nodemon ./index.js --exec babel-node -e js" 
+   },
   "keywords": [
     "graphql"
   ],

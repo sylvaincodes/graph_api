@@ -6,9 +6,11 @@ const root = require("./controllers/root/index");
 
 // Initialiser l'application
 const app = express();
+const port = process.env.PORT;
+// const currentUrl = process.env.
 
 // Configurer les Middlewares
 middlewares(app, schema, root);
 
 app.listen(4000);
-console.log("Running a GraphQL API server at http://localhost:4000/graphql");
+console.log("Running a GraphQL API server at " + "/graphql");
