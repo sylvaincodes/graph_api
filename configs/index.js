@@ -7,6 +7,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const { graphqlHTTP } = require("express-graphql");
+const bodyParser = require("body-parser");
 dotenv.config();
 
 const dbConnect = mongoose
@@ -22,6 +23,7 @@ const dbConnect = mongoose
 const db = mongoose.connection;
 
 const middlewares = (app, schema, root) => {
+  app.use(bodyParser.json({ limit: "10mb" })); // parse application/json
   app.use(cors());
   app.options("*", cors()); //Activation pre flight
   app.use(

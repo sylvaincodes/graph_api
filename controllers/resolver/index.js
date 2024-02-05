@@ -34,17 +34,19 @@ function addTask({ content }) {
       done: false,
     });
 
-    task.save();
-    return task;
+    let newTask = task.save();
+
+    return newTask;
   } catch (error) {
     return error;
   }
 }
 
-function updateTask({ id, content }) {
+function updateTask({ id, content,done }) {
   try {
     let newTask = TaskModel.findByIdAndUpdate(id, {
       content: content,
+      done: done,
     });
     return newTask;
   } catch (error) {

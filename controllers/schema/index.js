@@ -7,7 +7,8 @@ const { buildSchema } = require("graphql");
 const schemas = buildSchema(`
 
   type Task {
-    _id: String
+    _id: ID
+    id: ID
     content: String
     done: Boolean
   }
@@ -15,9 +16,10 @@ const schemas = buildSchema(`
     allTasks(done: Boolean): [Task]
     task(id: String): Task
   }
+
   type Mutation{
-    addTask(content: String): Task
-    updateTask(id: String, content: String): Task
+    addTask(content: String!): Task!
+    updateTask(id: String, content: String, done: Boolean): Task
   }
 
 `);
